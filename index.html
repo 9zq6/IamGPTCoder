@@ -3,8 +3,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IamGPTCoder</title>
+    <style>
+        .toggle-button-1 {
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            height: 50px;
+            border-radius: 50px;
+            background-color: #dddddd;
+            cursor: pointer;
+            transition: background-color .4s;
+        }
+        
+        .toggle-button-1:has(:checked) {
+            background-color: #4bd865;
+        }
+        
+        .toggle-button-1::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+            background-color: #fff;
+            content: '';
+            transition: left .4s;
+        }
+        
+        .toggle-button-1:has(:checked)::after {
+            left: 50px;
+        }
+        
+        .toggle-button-1 input {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <h1>テスト用</h1>
+    <label class="toggle-button-1">
+        <input type="checkbox"/>
+    </label>
 </body>
 </html>
